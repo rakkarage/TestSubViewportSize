@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://dikxci4tpb3kt"]
+
+[ext_resource type="Script" path="res://Test.gd" id="1_0uode"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+script = ExtResource("1_0uode")
+
+[node name="Camera2D" type="Camera2D" parent="SubViewportContainer/SubViewport"]
+anchor_mode = 0
